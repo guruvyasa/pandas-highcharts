@@ -94,18 +94,39 @@ Import it in your views
 
 .. code:: python
 
-    import pandas_highcharts
+    from pandas_highcharts.core import serialize
     df = ... # create your dataframe here
-    chart = pandas_highcharts.serialize(df, render_to='my-chart', output_type='json')
+    chart = serialize(df, render_to='my-chart', output_type='json')
 
 In your templates
 
 .. code:: html
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Highcharts Example</title>
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<style type="text/css">
+${demo.css}
+		</style>
+
+	</head>
+	<body>
+
 
     <div id="my-chart"></div>
+
+    	<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script type="text/javascript">
       new Highcharts.Chart({{chart|safe}});
     </script>
+    </body>
+    </html>
+    
+    
 
 Contributing
 ------------
