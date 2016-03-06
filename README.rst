@@ -101,19 +101,19 @@ Import it in your views
 In your templates
 
 .. code:: html
-	<!DOCTYPE HTML>
-	<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>Highcharts Example</title>
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Highcharts Example</title>
 
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-		<style type="text/css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<style type="text/css">
 			${demo.css}
-		</style>
+	</style>
 
-	</head>
-	<body>
+</head>
+<body>
 
 
     	<div id="my-chart"></div>
@@ -123,8 +123,8 @@ In your templates
 	 <script type="text/javascript">
       		new Highcharts.Chart({{chart|safe}});
     	</script>
-    	</body>
-	</html>
+    </body>
+</html>
     
     
 
